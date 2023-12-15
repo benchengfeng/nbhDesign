@@ -1,22 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from 'react';
+import './App.css';
+import 'antd/dist/antd.css';
+
+import AppHeader from './components/common/header';
+import AppFooter from './components/common/footer';
+import AppHome from './views/home';
+
+import { Layout } from 'antd';
+const { Header, Content, Footer } = Layout;
 
 function App() {
-  const [data, setData] = useState([{}]);
-
-  useEffect(() => {
-    fetch("/members").then((res) => res.json()).then((data) => {
-      setData(data);
-      console.log(data);
-    });
-  },[]);
   return (
-    <div className="nomadMee">
-      {typeof data.members === "undefined" ? (
-        <p>...loading </p>
-      ) : (
-        data?.members.map((member, i) => <p key={i}>{member} </p>)
-      )}
-    </div>
+    <Layout className="mainLayout">
+      <Header>
+        <AppHeader/>
+      </Header>
+      <Content>
+        <AppHome/>
+      </Content>
+      <Footer>
+        <AppFooter/>  
+      </Footer>      
+    </Layout>
   );
 }
 
