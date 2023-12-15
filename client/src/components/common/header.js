@@ -45,12 +45,12 @@ function AppHeader() {
           >
             <Anchor targetOffset="65">
               <Link href="#hero" title="Home" />
-              <Link href="#about" title="About" />
+              {/* <Link href="#about" title="About" /> */}
               <Link href="#feature" title="Features" />
-              <Link href="#works" title="How it works" />
-              <Link href="#faq" title="FAQ" />
+              {/* <Link href="#works" title="How it works" /> */}
+              {/* <Link href="#faq" title="FAQ" /> */}
               <Link href="#pricing" title="Pricing" />
-              <Link href="#contact" title="Contact" />
+              {/* <Link href="#contact" title="Contact" /> */}
             </Anchor>
           </Drawer>
         </div>
