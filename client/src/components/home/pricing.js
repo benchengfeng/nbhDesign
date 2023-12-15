@@ -7,11 +7,11 @@ const data = [
     title: 'Basic',
     content: [
       {
-        price: '£29.99',
-        space: '1 GB of space',
+        price: '$59.99',
+        user: '2 Designs',
         user: '1 user',
         support: '24/7 support',
-        backup: 'Safe, reliable backup',
+        backup: 'Safe, reliable',
         access: 'Access from anywhere'
       }
     ]
@@ -20,11 +20,10 @@ const data = [
     title: 'Premium',
     content: [
       {
-        price: '£59.99',
-        space: '5 GB of space',
-        user: '5 users',
+        price: '$99.99',
+        user: '5 Designs',
         support: '24/7 support',
-        backup: 'Safe, reliable backup',
+        backup: 'Safe, reliable',
         access: 'Access from anywhere'
       }
     ]
@@ -33,11 +32,10 @@ const data = [
     title: 'Enterprise',
     content: [
       {
-        price: '£99.99',
-        space: 'Unlimited space',
-        user: '15 users',
+        price: '$199.99',
+        user: '10 Designs',
         support: '24/7 support',
-        backup: 'Safe, reliable backup',
+        backup: 'Safe, reliable',
         access: 'Access from anywhere'
       }
     ]
