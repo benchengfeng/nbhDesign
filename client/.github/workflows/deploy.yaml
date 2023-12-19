@@ -1,0 +1,26 @@
+name: Production Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: debian-10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Install dependencies and build
+        run: |
+           npm install
+           npm run build
+
+      - name: Deploy to Production
+        run: |
+          rsync -av --delete ./build/* nomadmt@ssh.cluster051.hosting.ovh.net:/homez.667/nomadmt/www
+          rsync -av --delete ./public/* nomadmt@ssh.cluster051.hosting.ovh.net:/homez.667/nomadmt/www
