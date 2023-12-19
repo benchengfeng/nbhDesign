@@ -20,7 +20,7 @@ function AppHeader() {
       <div className="header">
         <div className="logo">
           <i className="fas fa-bolt"></i>
-          <a href="http://google.com">Cheng Feng</a>
+          <a href="http://google.com">Cheng Feng Zhong</a>
         </div>
         <div className="mobileHidden">
           <Anchor targetOffset="65">

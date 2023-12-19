@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and Deploy prod
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: benchengfeng/NomadMee@v2
         with:
           ref: main
 
@@ -23,5 +23,5 @@ jobs:
 
       - name: Deploy to Production
         run: |
-          rsync -av --delete ./build/* ../www
-          rsync -av --delete ./public ../www
+          rsync -av --delete ./client/build/* ../www
+          rsync -av --delete ./client/public ../www
