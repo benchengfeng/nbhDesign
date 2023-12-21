@@ -8,8 +8,7 @@ const data = [
     content: [
       {
         price: '$59.99',
-        user: '2 Designs',
-        user: '1 user',
+        user: '3 Designs',
         support: '24/7 support',
         backup: 'Safe, reliable',
         access: 'Access from anywhere'
@@ -21,7 +20,7 @@ const data = [
     content: [
       {
         price: '$99.99',
-        user: '5 Designs',
+        user: '6 Designs',
         support: '24/7 support',
         backup: 'Safe, reliable',
         access: 'Access from anywhere'
