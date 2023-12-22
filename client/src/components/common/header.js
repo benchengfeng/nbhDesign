@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import { Anchor, Drawer, Button } from 'antd';
+import FetcherHook from '../../api/fetcher';
 
 const { Link } = Anchor;
 
@@ -21,6 +22,7 @@ function AppHeader() {
         <div className="logo">
           <i className="fas fa-bolt"></i>
           <a href="http://google.com">Cheng Feng Zhong</a>
+          <FetcherHook/>
         </div>
         <div className="mobileHidden">
           <Anchor targetOffset="65">
