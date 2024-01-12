@@ -25,7 +25,7 @@ function AppHeader() {
           <FetcherHook/>
         </div>
         <div className="mobileHidden">
-          <Anchor targetOffset="65">
+          <Anchor targetOffset={65}>
             <Link href="#hero" title="Home" />
             {/* <Link href="#about" title="About" /> */}
             <Link href="#feature" title="Features" />
@@ -45,7 +45,7 @@ function AppHeader() {
             onClose={onClose}
             visible={visible}
           >
-            <Anchor targetOffset="65">
+            <Anchor targetOffset={65}>
               <Link href="#hero" title="Home" />
               {/* <Link href="#about" title="About" /> */}
               <Link href="#feature" title="Features" />

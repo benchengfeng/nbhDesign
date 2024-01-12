@@ -2,7 +2,7 @@ import React from 'react';
 
 import { List, Card, Button } from 'antd';
 
-const data = [
+const data: any = [
   {
     title: 'Basic',
     content: [
@@ -59,7 +59,7 @@ function AppPricing() {
             xxl: 3,
           }}
           dataSource={data}
-          renderItem={item => (
+          renderItem={(item: any) => (
             <List.Item>
               <Card title={item.title}>
                 <p className="large">{item.content[0].price}</p>

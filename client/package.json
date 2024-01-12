@@ -7,13 +7,17 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "antd": "^4.3.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react": "^18",
+    "react-dom": "^18",
+    "react-scripts": "^5.0.1",
+    "typescript": "^5.3.3"
+  },
+  "overrides": {
+    "typescript": "^5.3.3"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build --openssl-legacy-provider",
+    "start": "react-scripts start",
+    "build": "rimraf ./build && tsc && react-scripts build --openssl-legacy-provider",
     "build-prod": "react-scripts build && rsync -av --delete ./build/* /www/ && rsync -av --delete ./public /www/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
