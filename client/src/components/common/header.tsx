@@ -21,7 +21,7 @@ function AppHeader() {
       <div className="header">
         <div className="logo">
           <i className="fas fa-bolt"></i>
-          <a href="http://google.com">Cheng Feng Zhong</a>
+          <a href="http://google.com">Cheng Feng ltd</a>
           <FetcherHook/>
         </div>
         <div className="mobileHidden">
