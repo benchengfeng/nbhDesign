@@ -1,29 +1,29 @@
-import React from 'react';
-import './App.css';
-import 'antd/dist/antd.css';
+// App.js
+import React from "react";
+import "./App.css";
+import "antd/dist/antd.css";
+import AppHeader from "./components/common/header";
+import AppFooter from "./components/common/footer";
+import { Layout } from "antd";
+import AppRouter from "./routes/appRouter";
 
-import AppHeader from './components/common/header';
-import AppFooter from './components/common/footer';
-import AppHome from './views/home';
-
-import { Layout } from 'antd';
 const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
     <Layout className="mainLayout">
       <Header>
-        <AppHeader/>
+        <AppHeader />
       </Header>
       <Content>
-        <AppHome/>
+        {/* Include AppRouter here to render different views */}
+        <AppRouter />
       </Content>
       <Footer>
-        <AppFooter/>  
-      </Footer>      
+        <AppFooter />
+      </Footer>
     </Layout>
   );
 }
 
 export default App;
-    // export NODE_OPTIONS=--openssl-legacy-provider

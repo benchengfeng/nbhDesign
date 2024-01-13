@@ -25,4 +25,3 @@ jobs:
         run: |
           rsync -av --delete ./client/build/* ../www
           rsync -av --delete ./client/public ../www
-          rsync -av --delete ./backend/* ../www

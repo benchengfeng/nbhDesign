@@ -1,0 +1,18 @@
+// AppRouter.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Features from '../components/home/feature';
+import AppHome from '../views/home';
+
+const AppRouter = () => {
+  return (
+    <Router>
+      <Routes>
+      <Route path="/" element={<AppHome />} />
+        <Route path="/features" element={<Features />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default AppRouter;
