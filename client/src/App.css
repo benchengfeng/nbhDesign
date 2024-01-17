@@ -206,13 +206,16 @@ hero
 */
 .heroBlock {
   background: url('assets/images/bg-hero.jpg') no-repeat;
-  background-position: 50% 100%;
+  background-position: 50% 10%;
   background-size: cover;
-  height: 100vh;
+  height: 50vh;
 }
 
 .heroBlock .container-fluid {
   display: block !important;
+}
+.aboutusBlock {
+  background: #f8f8f8 !important;
 }
 
 .heroBlock .ant-carousel,
@@ -386,6 +389,7 @@ contact
 .contactBlock .ant-form {
   max-width: 640px;
   margin: auto;
+  background: #BF9F68;
 }
 
 .contactBlock .ant-form textarea {
