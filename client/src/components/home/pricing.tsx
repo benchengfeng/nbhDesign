@@ -43,7 +43,7 @@ const data: any = [
 
 function AppPricing() {
   return (
-    <div id="pricing" className="block pricingBlock bgGray">
+    <div id="pricing" className="block pricingBlock">
       <div className="container-fluid">
         <div className="titleHolder">
           <h2>Choose a plan to fit your needs</h2>

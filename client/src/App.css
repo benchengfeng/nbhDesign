@@ -16,7 +16,7 @@ body {
 }
 
 .ant-layout {
-  background: #fff !important;
+  background: #FAF7F7 !important;
 }
 
 .mainLayout .ant-layout-header {
@@ -26,6 +26,10 @@ body {
   line-height: 1.6;
 }
 
+.featureBlock {
+  background: #FAF7F7;
+
+}
 p {
   font-size: 16px;
   line-height: 1.6;
@@ -344,6 +348,10 @@ faqs
 pricing block
 -------------
 */
+.pricingBlock {
+  background: #FAF7F7;
+
+}
 .pricingBlock .ant-list {
   text-align: center;
 }

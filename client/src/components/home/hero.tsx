@@ -32,7 +32,7 @@ function AppHero() {
                 <h3>{item.title}</h3>
                 <p>{item.content}</p>
                 <div className="btnHolder">
-                  <Button type="primary" size="large">Learn More</Button>
+                  {/* <Button type="default" size="large" >Learn More</Button> */}
                   <Button size="large"><i className="fas fa-desktop"></i> Watch a Demo</Button>
                 </div>
               </div>

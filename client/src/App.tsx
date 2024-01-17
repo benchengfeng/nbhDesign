@@ -5,7 +5,8 @@ import "antd/dist/antd.css";
 import AppHeader from "./components/common/header";
 import AppFooter from "./components/common/footer";
 import { Layout } from "antd";
-import AppRouter from "./routes/appRouter";
+import AppHome from "./views/home";
+// import AppRouter from "./routes/appRouter";
 
 const { Header, Content, Footer } = Layout;
 
@@ -16,8 +17,10 @@ function App() {
         <AppHeader />
       </Header>
       <Content>
+      <AppHome />
+
         {/* Include AppRouter here to render different views */}
-        <AppRouter />
+        {/* <AppRouter /> */}
       </Content>
       <Footer>
         <AppFooter />

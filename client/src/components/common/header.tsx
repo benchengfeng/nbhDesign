@@ -21,17 +21,17 @@ function AppHeader() {
       <div className="header">
         <div className="logo">
           <i className="fas fa-bolt"></i>
-          <a href="http://google.com">Cheng Feng ltd</a>
+          <a href="http://google.com">NBH Design</a>
           <FetcherHook/>
         </div>
         <div className="mobileHidden">
           <Anchor targetOffset={65}>
             <Link href="/" title="Home" />
-            {/* <Link href="#about" title="About" /> */}
-            <Link href="features" title="Features" />
+            <Link href="#about" title="About" />
+            <Link href="#feature" title="Features" />
             {/* <Link href="#works" title="How it works" /> */}
-            {/* <Link href="#faq" title="FAQ" /> */}
-            {/* <Link href="pricing" title="Pricing" /> */}
+            <Link href="#faq" title="FAQ" />
+            <Link href="pricing" title="Pricing" />
             {/* <Link href="#contact" title="Contact" /> */}
           </Anchor>
         </div>
@@ -47,11 +47,11 @@ function AppHeader() {
           >
             <Anchor targetOffset={65}>
               <Link href="/" title="Home" />
-              {/* <Link href="#about" title="About" /> */}
-              <Link href="features" title="Features" />
+              <Link href="#about" title="About" />
+              <Link href="#feature" title="Features" />
               {/* <Link href="#works" title="How it works" /> */}
-              {/* <Link href="#faq" title="FAQ" /> */}
-              {/* <Link href="#pricing" title="Pricing" /> */}
+              <Link href="#faq" title="FAQ" />
+              <Link href="#pricing" title="Pricing" />
               {/* <Link href="#contact" title="Contact" /> */}
             </Anchor>
           </Drawer>
