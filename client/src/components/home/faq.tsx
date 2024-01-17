@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Collapse, Button } from 'antd';
+import SendMailButton from '../../api/sendMail';
 
 const { Panel } = Collapse;
 
@@ -35,6 +36,8 @@ function AppFaq() {
           <h3>Want quick support?</h3>
           <p>Get quick support 24/7 with our dedicated customer service team. We're here to help you manage your account, answer any questions, and resolve any issues. Trust us to make your experience stress-free and enjoyable.</p>
           <Button type="primary" size="large"><i className="fas fa-envelope"></i> Email your question</Button>
+          <SendMailButton />
+          
         </div>
       </div>
     </div>  
