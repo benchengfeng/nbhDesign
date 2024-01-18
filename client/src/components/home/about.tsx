@@ -32,7 +32,7 @@ function AppAbout() {
   const control = useAnimation()
   const [ref, inView] = useInView()
   const boxVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
     hidden: { opacity: 0, scale: 0 },
   };
   
@@ -56,7 +56,7 @@ function AppAbout() {
           <h2>Section 1 on dit</h2>
         </div>
         <div className="contentHolder">
-          <p>Technology has revolutionized the way we live and work, providing us with new and innovative ways to solve problems, improve efficiency, and make our lives easier. From artificial intelligence to cloud computing, the rapid advancements in technology are changing the way we interact with the world around us. As we continue to push the boundaries of what is possible, we can expect new and exciting developments that will further shape the future of our world. Whether it's in healthcare, education, or any other industry, technology has the power to make a positive impact and create a better future for all of us. </p>
+          <p>Technology has revolutionized the way we live and work, providing us with new and innovative ways to solve problems, </p>
         </div>
         <div className="aboutusBlock">
         <Row gutter={[16, 16]}>   

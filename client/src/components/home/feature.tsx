@@ -32,7 +32,7 @@ function AppFeature() {
   const control = useAnimation();
   const [ref, inView] = useInView();
   const boxVariant = {
-    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
     hidden: { opacity: 0, scale: 0 },
   };
 
