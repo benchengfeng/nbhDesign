@@ -1,58 +1,81 @@
-import React from "react";
+import React from 'react';
 
-import image1 from "../../assets/images/modern-design.jpg";
-import image2 from "../../assets/images/clean-design.jpg";
-import image3 from "../../assets/images/great-support.jpg";
-import image4 from "../../assets/images/easy-customise.jpg";
-import image5 from "../../assets/images/unlimited-features.jpg";
-import image6 from "../../assets/images/advanced-option.jpg";
+import { Row, Col } from 'antd';
+import { motion, useAnimation } from "framer-motion";
 
-import { Row, Col } from "antd";
-import { Card } from "antd";
+import { useInView } from "react-intersection-observer";
 
-const { Meta } = Card;
+import { useEffect } from "react";
+
+
+const items = [
+  {
+    key: '1',
+    title: 'High Performance',
+    content: 'Elevate your game with high-performance technology. Enjoy seamless, efficient and powerful experiences.',
+  },
+  // {
+  //   key: '2',
+  //   icon: <i className="fas fa-desktop"></i>,
+  //   title: 'Flat Design',
+  //   content: 'Simplify your aesthetic with flat design. Clean, modern, and minimal design elements for a fresh look.',
+  // },
+  // {
+  //   key: '3',
+  //   icon: <i className="fas fa-database"></i>,
+  //   title: 'Simplified Workflow',
+  //   content: 'Streamline your work with our intuitive and efficient workflow solution. Get more done, faster and with ease.',
+  // },
+]
 
 function AppFeature() {
+  const control = useAnimation()
+const [ref, inView] = useInView()
+const boxVariant = {
+  visible: { opacity: 1, scale: 1 },
+  hidden: { opacity: 0, scale: 0 },
+};
+
+useEffect(() => {
+  if (inView) {
+    control.start("visible");
+  } 
+}, [control, inView]);
+
   return (
-      <div id="feature" className="block featureBlock">
-        <div className="container-fluid">
-          <div className="titleHolder">
-            <h2>Key Features and Benefits</h2>
-          </div>
-          <Row gutter={[16, 16]}>
-            <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <Card hoverable cover={<img alt="Modern Design" src={image1} />}>
-                <Meta title="Modern Design" />
-              </Card>
-            </Col>
-            <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <Card hoverable cover={<img alt="Test" src={image2} />}>
-                <Meta title="Clean and Elegant" />
-              </Card>
-            </Col>
-            <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <Card hoverable cover={<img alt="Test" src={image3} />}>
-                <Meta title="Great Support" />
-              </Card>
-            </Col>
-            <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <Card hoverable cover={<img alt="Test" src={image4} />}>
-                <Meta title="Easy to customise" />
-              </Card>
-            </Col>
-            <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <Card hoverable cover={<img alt="Test" src={image5} />}>
-                <Meta title="Unlimited Features" />
-              </Card>
-            </Col>
-            <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }}>
-              <Card hoverable cover={<img alt="Test" src={image6} />}>
-                <Meta title="Advanced Options" />
-              </Card>
-            </Col>
-          </Row>
+    <div id="feature" className="block aboutBlock">
+      <div className="container-fluid">
+      <motion.div
+        ref={ref}
+        animate={control}
+        className="container-fluid"
+        variants={boxVariant}
+        initial="hidden"
+      >
+
+        <div className="titleHolder">
+          <h2>section 2 on dit quelques chose </h2>
         </div>
+        <div className="contentHolder">
+          <p>Technology has revolutionized the way we live and work</p>
+        </div>
+        <div className="aboutusBlock">
+        <Row gutter={[16, 16]}>   
+          {items.map(item => {
+            return (
+              <Col md={{ span: 8 }} key={item.key}>
+                <div className="content">
+                  <h3>{item.title}</h3>
+                  <p>{item.content}</p>
+                </div>
+              </Col>
+            );
+          })}
+        </Row>
+          </div>
+          </motion.div>
       </div>
+    </div>
   );
 }
 

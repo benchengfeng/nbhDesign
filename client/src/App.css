@@ -26,10 +26,6 @@ body {
   line-height: 1.6;
 }
 
-.featureBlock {
-  background: #FAF7F7;
-
-}
 p {
   font-size: 16px;
   line-height: 1.6;
@@ -53,7 +49,7 @@ title holder
 .titleHolder:after {
   transform: translateX(-50%);
   content: '';
-  background: #1890ff;
+  background: #BF9F68;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -278,12 +274,21 @@ about
 
 .aboutBlock .icon {
   font-size: 40px;
-  color: #1890ff;
+  color: #BF9F68;
   margin: 0 0 10px;
 }
 
 .aboutBlock .content {
   text-align: center;
+}
+
+/*
+feature
+*/
+.featureBlock {
+  background: #FAF7F7;
+
+
 }
 
 /* 

@@ -1,47 +1,69 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Modal } from 'antd';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-class AppWorks extends React.Component {
-  // Add the override modifier to the state property
-  override state = { visible: false };
-
-  showModal = () => {
-    this.setState({
-      visible: true,
-    });
+const AppWorks = () => {
+  const [visible, setVisible] = useState(false);
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0 },
   };
 
-  handleCancel = (e: React.MouseEvent<HTMLElement>) => {
+  useEffect(() => {
+    if (inView) {
+      control.start('visible');
+    }
+  }, [control, inView]);
+
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleCancel = (e:any) => {
     console.log(e);
-    this.setState({
-      visible: false,
-    });
+    setVisible(false);
   };
 
-  override render() {
-    return (
-      <div id="works" className="block worksBlock">
-        <div className="container-fluid">
+  return (
+    <div id="works" className="block worksBlock">
+      <div className="container-fluid">
+        <motion.div
+          ref={ref}
+          animate={control}
+          className="container-fluid"
+          variants={boxVariant}
+          initial="hidden"
+        >
           <div className="titleHolder">
-            <h2>How it works</h2>
-            <p>check our latest video to know how it works</p>
+            <h2>Demonstration video or portfolio</h2>
+            <p>Check our latest Demo to know how it works</p>
           </div>
           <div className="contentHolder">
-            <Button size="large" onClick={this.showModal}><i className="fas fa-play"></i></Button>
+            <Button size="large" onClick={showModal}>
+              <i className="fas fa-play"></i>
+            </Button>
           </div>
           <Modal
-            title="Woocommerce Tutorial"
-            visible={this.state.visible}
-            onCancel={this.handleCancel}
+            title="Mon Portfolio"
+            visible={visible}
+            onCancel={handleCancel}
             footer={null}
             destroyOnClose={true}
           >
-            <iframe title="Woocommerce Tutorial" width="100%" height="350" src="https://www.youtube.com/embed/8f8_JYIzOno?list=PLiUrl-SQRR7LQINGQGE99pXWDuKq4SxfU"></iframe>
+            <iframe
+              title="Mon Portfolio"
+              width="100%"
+              height="350"
+              src="https://www.youtube.com/"
+            ></iframe>
           </Modal>
-        </div>
+        </motion.div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default AppWorks;

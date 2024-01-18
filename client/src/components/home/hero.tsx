@@ -1,6 +1,11 @@
 import React from 'react';
 
 import { Carousel } from 'antd';
+import { motion, useAnimation } from "framer-motion";
+
+import { useInView } from "react-intersection-observer";
+
+import { useEffect } from "react";
 
 const items = [
   {
@@ -21,8 +26,28 @@ const items = [
 ]
 
 function AppHero() {
+  const control = useAnimation()
+  const [ref, inView] = useInView()
+  const boxVariant = {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0 },
+  };
+  
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } 
+  }, [control, inView]);
   return (
     <div id="hero" className="heroBlock">
+            <motion.div
+                    ref={ref}
+                    animate={control}
+        className="container-fluid"
+        variants={boxVariant}
+        initial="hidden"
+      >
+
       <Carousel autoplay={true} autoplaySpeed={5000}>
         {items.map(item => {
           return (
@@ -35,6 +60,7 @@ function AppHero() {
           );
         })}
       </Carousel>
+      </motion.div>
     </div>
   );
 }
