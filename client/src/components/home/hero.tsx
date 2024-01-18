@@ -31,7 +31,7 @@ function AppHero() {
   const control = useAnimation();
   const [ref, inView] = useInView();
   const boxVariant = {
-    visible: { opacity: 1, scale: 1 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
     hidden: { opacity: 0, scale: 0 },
   };
 

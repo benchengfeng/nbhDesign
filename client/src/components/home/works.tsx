@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { Button, Modal } from 'antd';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React, { useEffect, useState } from "react";
+import { Button, Modal } from "antd";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const AppWorks = () => {
   const [visible, setVisible] = useState(false);
   const control = useAnimation();
   const [ref, inView] = useInView();
   const boxVariant = {
-    visible: { opacity: 1, scale: 1 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
     hidden: { opacity: 0, scale: 0 },
   };
 
   useEffect(() => {
     if (inView) {
-      control.start('visible');
+      control.start("visible");
     }
   }, [control, inView]);
 
@@ -22,7 +22,7 @@ const AppWorks = () => {
     setVisible(true);
   };
 
-  const handleCancel = (e:any) => {
+  const handleCancel = (e: any) => {
     console.log(e);
     setVisible(false);
   };
