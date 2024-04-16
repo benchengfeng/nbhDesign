@@ -12,13 +12,13 @@ const items = [
     key: "1",
     title: "Design Architecture",
     content:
-      "Enter an immersive interior design experience for clients seeking exceptional creativity. Our approach merges aesthetics and function, enriching experiences for you and your patrons. Embrace a design revolution powered by AI and VR, shaping purposeful spaces beyond traditional limits.",
+      "Our approach merges aesthetics and function",
   },
   {
     key: "2",
     title: "Work better together. Schedule meetings",
     content:
-      "Collaborate and achieve your goals as a team. Join forces, share ideas and leverage each others strengths to reach new heights together. Let's work together and create a brighter future for us all.",
+      "Let's work together and create a brighter future for us all.",
   },
   // {
   //   key: '3',
