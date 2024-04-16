@@ -38,7 +38,7 @@ const AppWorks = () => {
           initial="hidden"
         >
           <div className="titleHolder">
-            <h2>Demonstration video or portfolio</h2>
+            <h2>Demonstration</h2>
             <p>Check our latest Demo to know how it works</p>
           </div>
           <div className="contentHolder">

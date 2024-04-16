@@ -53,17 +53,17 @@ function AppAbout() {
       >
 
         <div className="titleHolder">
-          <h2>Section 1 on dit</h2>
+          <h2></h2>
         </div>
         <div className="contentHolder">
           <p>Technology has revolutionized the way we live and work, providing us with new and innovative ways to solve problems, </p>
         </div>
         <div className="aboutusBlock">
-        <Row gutter={[16, 16]}>   
+        <Row gutter={[16, 16]} style={{justifyContent:"center"}}>   
           {items.map(item => {
             return (
               <Col md={{ span: 8 }} key={item.key}>
-                <div className="content">
+                <div className="content" >
                   <div className="icon">
                     {item.icon}
                   </div>
