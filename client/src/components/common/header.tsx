@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import { Anchor, Drawer, Button } from 'antd';
 import FetcherHook from '../../api/fetcher';
+import { Image } from "rebass"
+import LogoNbh from "../../assets/images/logonbh.jpg"
 
 const { Link } = Anchor;
 
@@ -20,7 +22,9 @@ function AppHeader() {
     <div className="container-fluid">
       <div className="header">
         <div className="logo">
-          <i className="fas fa-bolt"></i>
+          {/* <i className="fas fa-bolt"></i> */}
+          {/* <img src='assets/images/logonbh.jpg' /> */}
+          <Image src={LogoNbh} sx={{width:"10%", margin:"1em"}}></Image>
           <a href="http://google.com">NBH Design</a>
           <FetcherHook/>
         </div>
@@ -28,10 +32,10 @@ function AppHeader() {
           <Anchor targetOffset={65}>
             <Link href="/" title="Home" />
             <Link href="#about" title="About" />
-            <Link href="#feature" title="Features" />
-            {/* <Link href="#works" title="How it works" /> */}
-            <Link href="#faq" title="FAQ" />
-            <Link href="pricing" title="Pricing" />
+            {/* <Link href="#feature" title="Features" /> */}
+            <Link href="#works" title="How it works" />
+            {/* <Link href="#faq" title="FAQ" /> */}
+            {/* <Link href="pricing" title="Pricing" /> */}
             {/* <Link href="#contact" title="Contact" /> */}
           </Anchor>
         </div>

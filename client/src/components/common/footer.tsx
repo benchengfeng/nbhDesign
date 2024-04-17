@@ -1,13 +1,16 @@
 import React from 'react';
 
 import { BackTop } from 'antd';
+import { Image } from "rebass"
+import LogoNbh from "../../assets/images/logonbh.jpg"
 
 function AppFooter() {
   return (
     <div className="container-fluid">
       <div className="footer">
         <div className="logo">
-          <i className="fas fa-bolt"></i>
+          {/* <i className="fas fa-bolt"></i> */}
+          <Image src={LogoNbh} sx={{width:"10%", margin:"1em"}}></Image>
           <a href="http://google.com">NBH Design</a>
         </div>
         <ul className="socials">

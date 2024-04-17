@@ -211,8 +211,11 @@ hero
   display: block !important;
 }
 .aboutusBlock {
-  background: #f8f8f8 !important;
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(176, 155, 129));
+  border-radius: 10px; /* Adjust the value as needed */
+
 }
+
 
 .heroBlock .ant-carousel,
 .heroBlock .ant-carousel div {
@@ -282,6 +285,11 @@ about
   text-align: center;
 }
 
+.aboutBlock {
+  background-image: linear-gradient(to bottom right, rgb(176, 155, 129), rgb(255, 255, 255));
+  text-align: center;
+}
+
 /*
 feature
 */
@@ -296,7 +304,7 @@ how it works
 ------------
 */
 .worksBlock {
-  background: url('assets/images/bg-works.jpg') no-repeat;
+  background: url('assets/images/logonbh.jpg') no-repeat;
   background-position: 50% 0;
   background-size: cover;
   background-attachment: fixed;
