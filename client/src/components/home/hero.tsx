@@ -22,7 +22,7 @@ const items = [
   },
   // {
   //   key: '3',
-  //   title: 'The app to increase your productivity',
+  //   title: 'The best app to increase your productivity',
   //   content: 'Boost your productivity and streamline your workday with our cutting-edge app. Stay organized, prioritize tasks, and never miss a deadline. Get more done in less time and achieve your goals faster than ever before.',
   // },
 ];
