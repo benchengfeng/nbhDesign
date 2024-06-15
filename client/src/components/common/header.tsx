@@ -24,7 +24,7 @@ function AppHeader() {
         <div className="logo">
           {/* <i className="fas fa-bolt"></i> */}
           {/* <img src='assets/images/logonbh.jpg' /> */}
-          <Image src={LogoNbh} sx={{width:"10%", margin:"1em"}}></Image>
+          <Image src={LogoNbh} sx={{width:"10%", mr:"1em"}}></Image>
           <a href="http://google.com">Architecture et design d'intérieur</a>
           <FetcherHook/>
         </div>
