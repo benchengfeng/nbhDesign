@@ -11,7 +11,7 @@ function AppFooter() {
         <div className="logo">
           {/* <i className="fas fa-bolt"></i> */}
           <Image src={LogoNbh} sx={{width:"10%", margin:"1em"}}></Image>
-          <a href="http://google.com">NBH Design</a>
+          <a href="http://google.com">Architecture et design d'intérieur</a>
         </div>
         <ul className="socials">
           <li><a href="https://www.facebook.com/"><i className="fab fa-facebook-f"></i></a></li>
