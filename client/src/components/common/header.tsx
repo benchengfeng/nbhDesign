@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import { Anchor, Drawer, Button } from 'antd';
-import FetcherHook from '../../api/fetcher';
 import { Image } from "rebass"
 import LogoNbh from "../../assets/images/logonbh.png"
 
@@ -26,7 +25,7 @@ function AppHeader() {
           {/* <img src='assets/images/logonbh.jpg' /> */}
           <Image src={LogoNbh} sx={{width:"10%", mr:"1em"}}></Image>
           <a href="http://google.com">Architecture et design d'intérieur</a>
-          <FetcherHook/>
+          {/* <FetcherHook/> */}
         </div>
         <div className="mobileHidden">
           <Anchor targetOffset={65}>

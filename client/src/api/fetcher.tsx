@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // const FetcherHook = () => {
 //   const [data, setData] = useState<any>([]);
@@ -45,11 +45,7 @@ const FetcherHook = () => {
       });
   }, []);
 
-  return (
-    <div>
- On Dit Quoi
-    </div>
-  );
+  return (data);
 };
 
 export default FetcherHook;
