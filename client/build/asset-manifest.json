@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.fc9f45bc.css",
-    "main.js": "/static/js/main.89b82d2a.js",
+    "main.js": "/static/js/main.97b62a18.js",
     "static/media/bg-hero.jpg": "/static/media/bg-hero.96bc13aa48afa08075d9.jpg",
+    "static/media/logonbh.png": "/static/media/logonbh.afab660f7313cdb96255.png",
     "static/media/logonbh.jpg": "/static/media/logonbh.5578a0ea7663117e9289.jpg",
     "index.html": "/index.html",
     "main.fc9f45bc.css.map": "/static/css/main.fc9f45bc.css.map",
-    "main.89b82d2a.js.map": "/static/js/main.89b82d2a.js.map"
+    "main.97b62a18.js.map": "/static/js/main.97b62a18.js.map"
   },
   "entrypoints": [
     "static/css/main.fc9f45bc.css",
-    "static/js/main.89b82d2a.js"
+    "static/js/main.97b62a18.js"
   ]
 }

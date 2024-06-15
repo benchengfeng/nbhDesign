@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BackTop } from 'antd';
 import { Image } from "rebass"
-import LogoNbh from "../../assets/images/logonbh.jpg"
+import LogoNbh from "../../assets/images/logonbh.png"
 
 function AppFooter() {
   return (
