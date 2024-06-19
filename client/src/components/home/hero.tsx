@@ -1,29 +1,23 @@
-import React from "react";
-
+import React, { useEffect } from "react";
 import { Carousel } from "antd";
 import { motion, useAnimation } from "framer-motion";
-
 import { useInView } from "react-intersection-observer";
-
-import { useEffect } from "react";
 
 const items = [
   {
     key: "1",
-    title: "Design Architecture",
-    content:
-      "Our approach merges aesthetics and function",
+    title: "Architecture Design",
+    content: "Notre approche fusionne esthétique et fonctionnalité",
   },
   {
     key: "2",
-    title: "Work better together. Schedule meetings",
-    content:
-      "Let's work together and create a brighter future for us all.",
+    title: "Collaboration Optimale",
+    content: "Travaillons ensemble pour créer un avenir plus radieux.",
   },
   // {
   //   key: '3',
-  //   title: 'The app to increase your productivity',
-  //   content: 'Boost your productivity and streamline your workday with our cutting-edge app. Stay organized, prioritize tasks, and never miss a deadline. Get more done in less time and achieve your goals faster than ever before.',
+  //   title: 'Solutions Innovantes',
+  //   content: 'Découvrez nos solutions innovantes pour améliorer votre espace de vie et de travail.',
   // },
 ];
 
@@ -40,6 +34,7 @@ function AppHero() {
       control.start("visible");
     }
   }, [control, inView]);
+
   return (
     <div id="hero" className="heroBlock">
       <motion.div
@@ -49,7 +44,7 @@ function AppHero() {
         variants={boxVariant}
         initial="hidden"
       >
-        <Carousel autoplay={true} autoplaySpeed={5000} style={{paddingTop:"10em"}}>
+        <Carousel autoplay={true} autoplaySpeed={5000} style={{ paddingTop: "10em" }}>
           {items.map((item) => {
             return (
               <div key={item.key} className="container-fluid">

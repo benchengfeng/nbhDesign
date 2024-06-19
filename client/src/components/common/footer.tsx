@@ -3,14 +3,16 @@ import React from 'react';
 import { BackTop } from 'antd';
 import { Image } from "rebass"
 import LogoNbh from "../../assets/images/logonbh.png"
+import useIsMobile from '../../hooks/useIsMobile';
 
 function AppFooter() {
+  const isMobile = useIsMobile();
   return (
     <div className="container-fluid">
       <div className="footer">
         <div className="logo">
           {/* <i className="fas fa-bolt"></i> */}
-          <Image src={LogoNbh} sx={{width:"10%", margin:"1em"}}></Image>
+          <Image src={LogoNbh} sx={{width: isMobile ? "30%" : "10%", margin:"1em", background:"white"}}></Image>
           <a href="http://google.com">Architecture et design d'intérieur</a>
         </div>
         <ul className="socials">

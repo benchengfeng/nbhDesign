@@ -39,7 +39,7 @@ const AppWorks = () => {
         >
           <div className="titleHolder">
             <h2>Demonstration</h2>
-            <p>Check our latest Demo to know how it works</p>
+            <p>Découvrez notre dernière démo pour savoir comment cela fonctionne</p>
           </div>
           <div className="contentHolder">
             <Button size="large" onClick={showModal}>

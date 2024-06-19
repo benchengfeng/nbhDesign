@@ -211,7 +211,7 @@ hero
   display: block !important;
 }
 .aboutusBlock {
-  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(176, 155, 129));
+  /* background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(176, 155, 129)); */
   border-radius: 10px; /* Adjust the value as needed */
 
 }

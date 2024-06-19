@@ -4,7 +4,7 @@ import AppHero from "../components/home/hero";
 import AppAbout from "../components/home/about";
 // import AppFeature from "../components/home/feature";
 import AppWorks from '../components/home/works';
-// import AppFaq from '../components/home/faq';
+import AppFaq from '../components/home/faq';
 // import AppPricing from '../components/home/pricing';
 // import AppContact from '../components/home/contact';
 
@@ -16,7 +16,7 @@ function AppHome() {
       {/* <FetcherHook/> */}
       {/* <AppFeature /> */}
       <AppWorks/>
-      {/* <AppFaq/> */}
+      <AppFaq/>
       {/* <AppPricing/> */}
       {/* <AppContact/> */}
     </div>

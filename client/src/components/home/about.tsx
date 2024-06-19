@@ -1,82 +1,75 @@
-import React from 'react';
-
-import { Row, Col} from 'antd';
-import { motion, useAnimation } from "framer-motion";
-
-import { useInView } from "react-intersection-observer";
-
-import { useEffect } from "react";
+import React, { useEffect } from 'react';
+import { Row, Col } from 'antd';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const items = [
   {
     key: '1',
-    icon: <i className="fas fa-chart-pie"></i>,
-    title: 'High Performance',
-    content: 'Elevate your game with high-performance technology. Enjoy seamless, efficient and powerful experiences.',
+    icon: <i className="fas fa-palette"></i>,
+    title: 'Design Artistique',
+    content: 'Transformez vos espaces avec un design artistique et innovant. Profitez d\'une esthétique unique qui reflète votre style personnel.',
   },
   // {
   //   key: '2',
-  //   icon: <i className="fas fa-desktop"></i>,
-  //   title: 'Flat Design',
-  //   content: 'Simplify your aesthetic with flat design. Clean, modern, and minimal design elements for a fresh look.',
+  //   icon: <i className="fas fa-home"></i>,
+  //   title: 'Aménagement Intérieur',
+  //   content: 'Optimisez votre espace avec un aménagement intérieur fonctionnel et élégant. Des solutions sur mesure pour chaque pièce de votre maison.',
   // },
   // {
   //   key: '3',
-  //   icon: <i className="fas fa-database"></i>,
-  //   title: 'Simplified Workflow',
-  //   content: 'Streamline your work with our intuitive and efficient workflow solution. Get more done, faster and with ease.',
+  //   icon: <i className="fas fa-lightbulb"></i>,
+  //   title: 'Innovation et Créativité',
+  //   content: 'Alliez innovation et créativité pour des espaces uniques. Notre approche avant-gardiste donne vie à des intérieurs exceptionnels.',
   // },
-]
+];
 
 function AppAbout() {
-  const control = useAnimation()
-  const [ref, inView] = useInView()
+  const control = useAnimation();
+  const [ref, inView] = useInView();
   const boxVariant = {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
     hidden: { opacity: 0, scale: 0 },
   };
-  
+
   useEffect(() => {
     if (inView) {
-      control.start("visible");
-    } 
+      control.start('visible');
+    }
   }, [control, inView]);
+
   return (
     <div id="about" className="block aboutBlock">
       <div className="container-fluid">
-      <motion.div
-              ref={ref}
-              animate={control}
-        className="container-fluid"
-        variants={boxVariant}
-        initial="hidden"
-      >
-
-        <div className="titleHolder">
-          <h2></h2>
-        </div>
-        <div className="contentHolder">
-          <p>Technology has revolutionized the way we live and work, providing us with new and innovative ways to solve problems, </p>
-        </div>
-        <div className="aboutusBlock">
-        <Row gutter={[16, 16]} style={{justifyContent:"center"}}>   
-          {items.map(item => {
-            return (
-              <Col md={{ span: 8 }} key={item.key}>
-                <div className="content" >
-                  <div className="icon">
-                    {item.icon}
-                  </div>
-                  <h3>{item.title}</h3>
-                  <p>{item.content}</p>
-                </div>
-              </Col>
-            );
-          })}
-        </Row>
+        <motion.div
+          ref={ref}
+          animate={control}
+          className="container-fluid"
+          variants={boxVariant}
+          initial="hidden"
+        >
+          <div className="titleHolder">
+            <h2>À Propos de Nous</h2>
           </div>
-          </motion.div>
-
+          <div className="contentHolder">
+            <p>Nous créons des espaces uniques et inspirants grâce à notre expertise en design et architecture d'intérieur. Notre mission est de transformer vos idées en réalité avec une touche artistique et un souci du détail exceptionnel.</p>
+          </div>
+          <div className="aboutusBlock">
+            <Row gutter={[16, 16]} style={{ justifyContent: 'center' }}>
+              {items.map(item => (
+                <Col md={{ span: 8 }} key={item.key}>
+                  <div className="content">
+                    <div className="icon">
+                      {item.icon}
+                    </div>
+                    <h3>{item.title}</h3>
+                    <p>{item.content}</p>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
